@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 const Index = ({ currentUser, tickets }) => {
+  console.log('Client App started');
   const ticketList = tickets.map((ticket) => {
     return (
       <tr key={ticket.id}>
