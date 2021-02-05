@@ -7,6 +7,7 @@ import { ExpirationCompletedListener } from './events/listeners/expiration-compl
 import { PaymentCreatedListener } from './events/listeners/payment-created-listener';
 
 const start = async () => {
+  console.log('Starting Orders');
   if (!process.env.JWT_KEY) throw new Error('JWT_KEY must be define');
   if (!process.env.MONGO_URI) throw new Error('MONGO_URI must be define');
   if (!process.env.NATS_CLIENT_ID)
