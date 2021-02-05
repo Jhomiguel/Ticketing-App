@@ -1,13 +1,14 @@
 name: tests-auth
 
-#Run this action only when making a pull_request
+#Run this action only when making a pull_request and the changes are made inside
+#The Auth service.
 on:
   pull_request:
     paths:
       - 'auth/**'
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
